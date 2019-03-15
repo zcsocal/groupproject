@@ -1,0 +1,45 @@
+
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    background-image: url("https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    width: 100%;
+    background-color: rgb(255, 254, 254, .85);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.splashheader {
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center !important;
+    align-items: center;
+    font-size: 63px;
+
+}
+
+.pleaseshare {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.footer {
+
+
+}
+
+
+
+
