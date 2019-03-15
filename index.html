@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+    <!-- Jquery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
 </head>
 <body>
+
+
+<!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Clean Air Hiking</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Privacy</a>
+                    <a class="nav-item nav-link" href="#">About</a>
+                  </div>
+                </div>
+              </nav>
+
+<!-- Start of container -->
+    <!-- Main Content     -->
+        <div class="container">
+                <div class="row Header">
+                    <div class="col-lg-11">
+                          
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-lg-12">
+
+                    <!-- Main area of start screen     -->
+                    <h1 class="splashheader">Find clean air hiking trails near you.</h1>
+
+                    <p class="pleaseshare">Share your location with us and we'll help you on your way. <button class="btn btn-success" onclick="getLocation()"> Find me!</button></p>
+
+
+                    <p id="userLocation"></p>
+
+
+                    </div>
+                </div>
+
     
+            </div>
+<!-- End of container -->
+
+<!-- Footer -->
+    <div class="row footer">
+        <div class="col-lg-12"> Some footer text. We'll fill this in later.</div>
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
 </body>
 </html>
