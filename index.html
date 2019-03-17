@@ -50,10 +50,57 @@
                     <!-- Main area of start screen     -->
                     <h1 class="splashheader">Find clean air hiking trails near you.</h1>
 
-                    <p class="pleaseshare">Share your location with us and we'll help you on your way. <button class="btn btn-success" onclick="getLocation()"> Find me!</button></p>
+                    <p class="pleaseshare">Share your location with us and we'll help you on your way. <button  id="modal-btn" class="btn btn-success" onclick="getLocation()"> Find me!</button></p>
 
 
-                    <p id="userLocation"></p>
+                    <!-- <p id="userLocation"></p> -->
+
+                    <!-- Results Modal  -->
+                    <div id="my-modal" class="modal">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          
+                          <h2 class="modal-header-text">Hiking Trails Near You</h2>
+                          <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                          
+                        </div>
+                     
+                            <!----- Beginning of Results Container/Table ---->
+                                    <div class="container">
+                                      <h2>Basic Table</h2>
+                                      <h1 id="Tname"></h1>
+                                      <div id="div1"></div>
+                                      <table class="table">
+                                        <thead>
+                                          
+                                          <tr>
+                                            <!-- The scope attribute specifies that this is a header for a column -->
+                                            <th scope="col">Trails</th>
+                                            <th scope="col">Summary</th>
+                                            <th scope="col">Location</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <!-- <tr>
+                                            <td>Interstellar</td>
+                                            <td>2014</td>
+                                            <td>Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow</td>
+                                          </tr> -->
+                                          <!-- Insert additional movie rows here -->
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    <!-------- End of results container ---->
+                                    <p>This is your location</p>
+                                    <p id="userLocation"></p>
+                        <div class="modal-footer">
+                          <h3>Modal Footer</h3>
+                        </div>
+                      </div>
+                    </div>
+                      <!-- End Results Modal -->
 
 
                     </div>
@@ -62,34 +109,6 @@
     
             </div>
 <!-- End of container -->
-
-<!-- Beginning of Results Container/Table -->
-<div class="container">
-  <h2>Basic Table</h2>
-  <h1 id="Tname"></h1>
-  <div id="div1"></div>
-  <table class="table">
-    <thead>
-      
-      <tr>
-        <!-- The scope attribute specifies that this is a header for a column -->
-        <th scope="col">Trails</th>
-        <th scope="col">Summary</th>
-        <th scope="col">Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- <tr>
-        <td>Interstellar</td>
-        <td>2014</td>
-        <td>Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow</td>
-      </tr> -->
-      <!-- Insert additional movie rows here -->
-    </tbody>
-  </table>
-</div>
-<!-- End of results container -->
-
 
 
 
