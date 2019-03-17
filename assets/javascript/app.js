@@ -21,15 +21,22 @@ lngUser = position.coords.longitude;
 //Access to trails with Lat & Lon
     
 var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latUser +"&lon=" + lngUser + "&maxDistance=10&key=200430269-7625402c2fab0719cfcddb27c1c9a81c";
-console.log(queryURL);
+//console.log(queryURL);
 
 $.ajax({
     url: queryURL,
     method: "GET"
   }).done(function(response){
-    console.log(response);
-  })
-}
+    //console.log(response);
+    var results = response.trails;
+    for (var i=0 ; i<results.lenght ; i++){
+      var titleTd = (results[i].name);
+      console.log(titleTd);
+    };
+
+  });
+};
+
 
 
     // The below code fills in the first row of the table
