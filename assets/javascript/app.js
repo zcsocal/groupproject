@@ -28,6 +28,7 @@ $.ajax({
     method: "GET"
   }).done(function(response){
     //console.log(response);
+    var tRow = $("<tr>");
     var results = response.trails;
     for (var i=0 ; i<results.length ; i++){
       var titleTd = (results[i].name);
@@ -36,7 +37,8 @@ $.ajax({
       console.log(summaryTD);
       var locationTd = (results[i].location);
       console.log(locationTd);
-    
+      tRow.append(titleTd,summaryTD,locationTd);
+      $("tbody").append(tRow);
     };
       
   });
