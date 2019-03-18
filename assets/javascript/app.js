@@ -32,38 +32,50 @@ $.ajax({
     var results = response.trails;
     for (var i=0 ; i<results.length ; i++){
       var titleTd = (results[i].name);
-      console.log(titleTd);
       var summaryTD = (results[i].summary);
-      console.log(summaryTD);
       var locationTd = (results[i].location);
+      
+      console.log(titleTd);
+      $("#trail1").html(titleTd).append(tRow);      
+      console.log(summaryTD);
+
+      $("#summary1").html(summaryTD).append(tRow);
       console.log(locationTd);
-      tRow.append(titleTd,summaryTD,locationTd);
-      $("tbody").append(tRow);
+      
+      $("#location1").html(locationTd).append(tRow);
+      // tRow.append(titleTd,summaryTD,locationTd);
+      // $("tbody").append(tRow);
     };
       
   });
 };
 
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('#modal-btn');
+const closeBtn = document.querySelector('.close');
 
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
 
-    // The below code fills in the first row of the table
+// Open
+function openModal() {
+    $(userLocation).empty();  
+  modal.style.display = 'block';
+}
 
-    // }).then(function(response) {
-    //   // Create a new table row element
-    //   var tRow = $("<tr>");
-    //   console.log(response);
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
 
-    //   // Methods run on jQuery selectors return the selector they we run on
-    //   // This is why we can create and save a reference to a td in the same statement we update its text
-    //   var titleTd = $("<td>").text(response.trails[0].name);
-    //   var summaryTD= $("<td>").text(response.trails[0].summary);
-    
-        
-    //   // Append the newly created table data to the table row
-    //   tRow.append(titleTd);
-    //   // Append the table row to the table body
-    //   $("tbody").append(tRow);
-    // });
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
 
 
 
