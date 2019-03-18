@@ -23,6 +23,10 @@ lngUser = position.coords.longitude;
 var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latUser +"&lon=" + lngUser + "&maxDistance=10&key=200430269-7625402c2fab0719cfcddb27c1c9a81c";
 //console.log(queryURL);
 
+//airquality API combined with user's lat & lng
+var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + latUser + "&lon=" + lngUser + "&key=zATseQrGoQx73DZX2";
+console.log(airqURL);
+
 $.ajax({
     url: queryURL,
     method: "GET"
