@@ -29,11 +29,16 @@ $.ajax({
   }).done(function(response){
     //console.log(response);
     var results = response.trails;
-    for (var i=0 ; i<results.lenght ; i++){
+    for (var i=0 ; i<results.length ; i++){
       var titleTd = (results[i].name);
       console.log(titleTd);
+      var summaryTD = (results[i].summary);
+      console.log(summaryTD);
+      var locationTd = (results[i].location);
+      console.log(locationTd);
+    
     };
-
+      
   });
 };
 
@@ -61,32 +66,3 @@ $.ajax({
 
 
 
-
-
-    // Get DOM Elements
-const modal = document.querySelector('#my-modal');
-const modalBtn = document.querySelector('#modal-btn');
-const closeBtn = document.querySelector('.close');
-
-// Events
-modalBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
-window.addEventListener('click', outsideClick);
-
-// Open
-function openModal() {
-    $(userLocation).empty();  
-  modal.style.display = 'block';
-}
-
-// Close
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-// Close If Outside Click
-function outsideClick(e) {
-  if (e.target == modal) {
-    modal.style.display = 'none';
-  }
-}
