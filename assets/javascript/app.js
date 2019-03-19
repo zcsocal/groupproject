@@ -35,18 +35,21 @@ $.ajax({
     var tRow = $("<tr>");
     var results = response.trails;
     for (var i=0 ; i<results.length ; i++){
-      var titleTd = (results[i].name);
-      var summaryTD = (results[i].summary);
-      var locationTd = (results[i].location);
+      $("#trail1").append(results[i].name);
+      $("#summary1").append(results[i].summary);
+      $("#location1").append(results[i].location);
+      // var titleTd = (results[i].name);
+      // var summaryTD = (results[i].summary);
+      // var locationTd = (results[i].location);
       
-      console.log(titleTd);
-      $("#trail1").html(titleTd).append(tRow);      
-      console.log(summaryTD);
+      // console.log(titleTd);
+      // $("#trail1").html(titleTd).append(tRow);      
+      // console.log(summaryTD);
 
-      $("#summary1").html(summaryTD).append(tRow);
-      console.log(locationTd);
+      // $("#summary1").html(summaryTD).append(tRow);
+      // console.log(locationTd);
       
-      $("#location1").html(locationTd).append(tRow);
+      // $("#location1").html(locationTd).append(tRow);
       // tRow.append(titleTd,summaryTD,locationTd);
       // $("tbody").append(tRow);
     };
