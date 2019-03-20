@@ -1,12 +1,15 @@
 
 
 body {
-
-    font-family: 'Roboto', sans-serif;
-    background-image: url("https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg");
-    background-repeat: no-repeat;
+    background: url(https://www.uncovercolorado.com/wp-content/uploads/2017/10/Eldorado-Canyon-Hiking-Trail-Boulder-1280x720.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
+
+
+
 
 .content {
     width: 100%;
@@ -18,6 +21,22 @@ body {
     height: 500px;
     border-radius: 10px;
 }
+
+
+.content_pages {
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgb(255, 254, 254, .95);
+    margin-top: 20px;
+    /* align-items: center; */
+    border-radius: 10px;
+}
+
+.page-headers {
+    margin-top: 15px;
+
+}
+
 
 .splashheader {
 
@@ -35,7 +54,26 @@ body {
     margin-top: 40px;
 }
 
+#userLocation {
+    color: white;
+    
+    
+}
 
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    background: white;
+    text-align: center;
+    
+    
+ }
+
+ .footertext {
+     padding-top: 15px;
+ }
 
 
 
@@ -56,7 +94,7 @@ body {
   
   .modal-content {
     margin: 10% auto;
-    width: 60%;
+    width: 90%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
