@@ -32,26 +32,25 @@ $.ajax({
     method: "GET"
   }).done(function(response){
     //console.log(response);
-    var tRow = $("<tr>");
     var results = response.trails;
-    for (var i=0 ; i<results.length ; i++){
-      $("#trail1").append(results[i].name);
-      $("#summary1").append(results[i].summary);
-      $("#location1").append(results[i].location);
-      // var titleTd = (results[i].name);
-      // var summaryTD = (results[i].summary);
-      // var locationTd = (results[i].location);
-      
-      // console.log(titleTd);
-      // $("#trail1").html(titleTd).append(tRow);      
-      // console.log(summaryTD);
+    
 
-      // $("#summary1").html(summaryTD).append(tRow);
-      // console.log(locationTd);
+    for (var i=0 ; i<results.length ; i++){
+      var tRow = $("<tr>");
+      var titleTd = $("<td scope = 'col'>");
+      var summaryTd = $("<td scope = 'col'>");
+      var locationTd = $("<td scope = 'col'>");
+
+      titleTd.text(results[i].name);
+      summaryTd.text(results[i].summary);
+      locationTd.text(results[i].location);
+
+      console.log(results[i]);
       
-      // $("#location1").html(locationTd).append(tRow);
-      // tRow.append(titleTd,summaryTD,locationTd);
-      // $("tbody").append(tRow);
+      tRow.append(titleTd,summaryTd,locationTd);
+
+      $("#tableBody").append(tRow);
+      
     };
       
   });
