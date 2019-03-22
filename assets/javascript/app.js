@@ -18,6 +18,48 @@ x.innerHTML = "Latitude: " + position.coords.latitude +
 latUser = position.coords.latitude;
 lngUser = position.coords.longitude;
 
+// Map of User Location
+
+// var lon = -118.2;
+// var lat = 34;
+console.log(lngUser,latUser);
+var myMap = new ol.Map({
+  target: 'map',
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
+    })        
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([lngUser, latUser]),
+    zoom: 11
+  })
+});
+
+var marker = new ol.Feature({
+  geometry: new ol.geom.Point(
+    ol.proj.fromLonLat([lngUser, latUser])
+  )
+});
+
+var iconStyle = new ol.style.Style({
+  image: new ol.style.Icon(({
+    anchor: [0.5, 1],
+    src: "http://cdn.mapmarker.io/api/v1/pin?text=O&size=50&hoffset=1"
+  }))
+});
+
+marker.setStyle(iconStyle);
+
+var vectorSource = new ol.source.Vector({
+  features: [marker]
+});
+var vectorLayer = new ol.layer.Vector({
+    source: vectorSource
+});
+myMap.addLayer(vectorLayer);
+
+
 //Access to trails with Lat & Lon
     
 var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latUser +"&lon=" + lngUser + "&maxDistance=10&key=200430269-7625402c2fab0719cfcddb27c1c9a81c";
@@ -88,46 +130,5 @@ function outsideClick(e) {
 }
 
 
-
-// Map of User Location
-
-var lon = -118.2;
-var lat = 34;
-
-var myMap = new ol.Map({
-  target: 'map',
-  layers: [
-    new ol.layer.Tile({
-      source: new ol.source.OSM()
-    })        
-  ],
-  view: new ol.View({
-    center: ol.proj.fromLonLat([lon, lat]),
-    zoom: 11
-  })
-});
-
-var marker = new ol.Feature({
-  geometry: new ol.geom.Point(
-    ol.proj.fromLonLat([lon, lat])
-  )
-});
-
-var iconStyle = new ol.style.Style({
-  image: new ol.style.Icon(({
-    anchor: [0.5, 1],
-    src: "http://cdn.mapmarker.io/api/v1/pin?text=O&size=50&hoffset=1"
-  }))
-});
-
-marker.setStyle(iconStyle);
-
-var vectorSource = new ol.source.Vector({
-  features: [marker]
-});
-var vectorLayer = new ol.layer.Vector({
-    source: vectorSource
-});
-myMap.addLayer(vectorLayer);
 
 
