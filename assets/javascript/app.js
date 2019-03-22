@@ -66,8 +66,17 @@ var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latUser +"
 //console.log(queryURL);
 
 //airquality API combined with user's lat & lng
-// var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + latUser + "&lon=" + lngUser + "&key=zATseQrGoQx73DZX2";
-// console.log(airqURL);
+
+//console.log(airqURL);
+var Weatherpop=function(trailsLat,trailsLong,i){
+  var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + trailsLat + "&lon=" + trailsLong + "&key=zATseQrGoQx73DZX2";
+  $.ajax({
+    url: airqURL,
+    method: "GET"}).then(function(response){
+      $("#weather"+i).text(response.data.current.pollution.aqicn);
+      console.log(response);
+    });
+};
 
 $.ajax({
     url: queryURL,
@@ -82,14 +91,14 @@ $.ajax({
       var titleTd = $("<td scope = 'col'>");
       var summaryTd = $("<td scope = 'col'>");
       var locationTd = $("<td scope = 'col'>");
-
+      var weatherTD =$("<td id='weather"+i+"' scope = 'col'>");
       titleTd.text(results[i].name);
       summaryTd.text(results[i].summary);
       locationTd.text(results[i].location);
-
+      Weatherpop(results[i].latitude,results[i].longitude,i);
       console.log(results[i]);
       
-      tRow.append(titleTd,summaryTd,locationTd);
+      tRow.append(titleTd,summaryTd,locationTd,weatherTD);
 
       $("#tableBody").append(tRow);
       
