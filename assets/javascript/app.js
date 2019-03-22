@@ -66,8 +66,8 @@ var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latUser +"
 //console.log(queryURL);
 
 //airquality API combined with user's lat & lng
-var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + latUser + "&lon=" + lngUser + "&key=zATseQrGoQx73DZX2";
-console.log(airqURL);
+// var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + latUser + "&lon=" + lngUser + "&key=zATseQrGoQx73DZX2";
+// console.log(airqURL);
 
 $.ajax({
     url: queryURL,

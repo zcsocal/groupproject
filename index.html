@@ -55,7 +55,7 @@
                     <!-- Main area of start screen     -->
                     <h1 class="splashheader">Find clean air hiking trails near you.</h1>
 
-                    <p class="pleaseshare">Share your location with us and we'll help you on your way. <button  id="modal-btn" class="btn btn-success" onclick="getLocation()"> Find me!</button></p>
+                    <p class="pleaseshare">Share your location with us and we'll help you on your way. <button  id="modal-btn" class="btn btn-success" onclick="getLocation()"> Find trails near me!</button></p>
 
 
                     <!-- <p id="userLocation"></p> -->
@@ -69,6 +69,8 @@
                           <span class="close">&times;</span>
                         </div>
                         <div class="modal-body">
+                          <h3>You are Here:</h3>
+                          <div id="map" class="map"></div>
 
                         </div>
                      
@@ -93,10 +95,10 @@
                                     </div>
                                     <!-------- End of results container ---->
                                     
-                                    <p id="userLocation"></p>
+                                    
                                     
                         <div class="modal-footer">
-                          <h3>Modal Footer</h3>
+                          <p id="userLocation"></p>
                         </div>
                       </div>
                     </div>
@@ -109,13 +111,12 @@
     
             </div>
 <!-- End of container -->
-<div id="map" class="map"></div>
 
 
 
 <!-- Footer -->
     <div class="footer">
-        <div class="col-lg-12"><p class="footertext"> Some footer text. We'll fill this in later.</p></div>
+        <div class="col-lg-12"><p class="footertext">Project brought to you by:  Amir, Abby, Zak, & Beth</p></div>
     </div>
 
 
