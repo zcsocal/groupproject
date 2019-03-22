@@ -25,7 +25,7 @@ body {
 
 .content_pages {
     width: 100%;
-    /* height: 100%; */
+    height: 500px;
     background-color: rgb(255, 254, 254, .95);
     margin-top: 20px;
     /* align-items: center; */
@@ -58,6 +58,13 @@ body {
     color: white;
     
     
+}
+
+.airquality_key{
+    border: 9px !important;
+    align-content: right;
+    width: 400px;
+
 }
 
 .footer {
