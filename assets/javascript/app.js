@@ -69,7 +69,8 @@ var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latUser +"
 
 //console.log(airqURL);
 var Weatherpop=function(trailsLat,trailsLong,i){
-  var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + trailsLat + "&lon=" + trailsLong + "&key=zATseQrGoQx73DZX2";
+  var airqURL = "https://api.airvisual.com/v2/nearest_city?lat=" + trailsLat + "&lon=" + trailsLong + "&key=XmE3Nd7JzNxP6xarc"; 
+  // Amir's API zATseQrGoQx73DZX2
   $.ajax({
     url: airqURL,
     method: "GET"}).then(function(response){

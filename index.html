@@ -71,9 +71,36 @@
                         <div class="modal-body">
                           <h3>You are Here:</h3>
                           <div id="map" class="map"></div>
+                          
 
-                        </div>
-                     
+                          </div>
+                          <table style="width: 90%; margin-left: auto; margin-right: auto;">
+                            <tbody>
+                            <tr>  
+                              <td> <strong>Air Quality Index (AQI)</strong></td>
+                            </tr>
+                            <tr>
+                            <td style="background-color: green; width: 16%;">&nbsp;</td>
+                            <td style="background-color: yellow; width: 16%;">&nbsp;</td>
+                            <td style="background-color: orange; width: 16%;">&nbsp;</td>
+                            <td style="background-color: red; width: 16%;">&nbsp;</td>
+                            <td style="background-color: purple; width: 16%;">&nbsp;</td>
+                            <td style="background-color: darkred; width: 16%;">&nbsp;</td>
+                            </tr>
+                             <tr>
+                            <td>Good 0–50</td>
+                            <td>Moderate 51–100</td>
+                            <td>Sensitive 101–150</td>
+                            <td>Unhealthy 151–200</td>
+                            <td>Very unhealthy 201–300</td>
+                            <td>Hazardous >300</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        
+
+
+
                             <!----- Beginning of Results Container/Table ---->
                                     <div class="container">
                                       
@@ -87,7 +114,7 @@
                                             <th scope="col" id = "trails">Trails</th>
                                             <th scope="col" id = "summary">Summary</th>
                                             <th scope="col" id = "location">Location</th>
-											<th scope="col" id = "weather">Weather</th>
+											                      <th scope="col" id = "weather">AQI</th>
                                           </tr>
                                         </thead>
                                         <tbody id="tableBody">
